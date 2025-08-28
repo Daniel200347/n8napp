@@ -1,0 +1,64 @@
+.personalSettings {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #020618;
+  margin: 0 0 24px 0;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 640px;
+  margin-bottom: 16px;
+}
+
+.formRow {
+  display: flex;
+  gap: 16px;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.label {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.428;
+  color: #020618;
+}
+
+.input {
+  flex: 1;
+}
+
+.emailInput {
+  width: 100%;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formContainer {
+    width: 100%;
+  }
+
+  .formRow {
+    flex-direction: column;
+  }
+}

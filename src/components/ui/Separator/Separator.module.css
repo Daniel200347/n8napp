@@ -1,0 +1,21 @@
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.text {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #62748e;
+  text-align: center;
+}

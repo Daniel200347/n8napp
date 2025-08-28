@@ -1,0 +1,131 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.428;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+/* Variants */
+.primary {
+  background-color: #155DFC;
+  color: #F8FAFC;
+}
+
+.primary:hover:not(:disabled) {
+  background-color: #0F4CD1;
+}
+
+.outline {
+  background-color: #FFFFFF;
+  color: #0F172B;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.outline:hover:not(:disabled) {
+  border-color: #CBD5E1;
+  background-color: #F8FAFC;
+}
+
+.default {
+  background-color: #155DFC;
+  color: #F8FAFC;
+}
+
+.default:hover:not(:disabled) {
+  background-color: #0F4CD1;
+}
+
+.disabled {
+  background-color: #FFFFFF;
+  color: #0F172B;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: #FFFFFF;
+  border-color: #E2E8F0;
+  opacity: 0.5;
+}
+
+.google {
+  background-color: #FFFFFF;
+  color: #0F172B;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.google:hover:not(:disabled) {
+  border-color: #CBD5E1;
+  background-color: #F8FAFC;
+}
+
+/* Sizes */
+.default {
+  padding: 8px 16px;
+}
+
+.md {
+  padding: 10px 20px;
+  height: 40px;
+}
+
+.lg {
+  padding: 0px 24px;
+  height: 40px;
+}
+
+.icon {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Icons */
+.leftIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Focus state */
+.button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px rgba(21, 93, 252, 0.1);
+}
+

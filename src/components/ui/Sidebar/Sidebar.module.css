@@ -1,0 +1,233 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #F1F5F9;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 12px 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Logo Section */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 52px;
+  flex-grow: 1;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  color: #62748E;
+}
+
+.menuItem:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.menuItemActive {
+  background-color: #FFFFFF;
+  color: #020618;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.menuItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.menuItemLabel {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Usage Card */
+.usageCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0 0;
+  border-top: 1px solid #E2E8F0;
+}
+
+.usageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.usageInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.usageTitle,
+.usageValue {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.428;
+  color: #020618;
+}
+
+.progressContainer {
+  width: 100%;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #FFFFFF;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #155DFC;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.trialInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trialLabel {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.428;
+  color: #62748E;
+}
+
+.trialValue {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.428;
+  color: #62748E;
+}
+
+.upgradeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 0 24px;
+  height: 40px;
+  background-color: #155DFC;
+  color: #F8FAFC;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.428;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.upgradeButton:hover {
+  background-color: #0F4CD1;
+}
+
+.upgradeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Profile Section */
+.profileSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid #E2E8F0;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  overflow: hidden;
+}
+
+
+
+.profileName {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #020618;
+}
+
+.profileMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #62748E;
+  padding: 0;
+}
+
+.profileMenuButton:hover {
+  color: #020618;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+}

@@ -1,0 +1,90 @@
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.label {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #020618;
+    margin-left: 1px;
+    text-align: left;
+}
+
+.inputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    min-height: 40px;
+    max-height: 40px;
+    border-radius: 6px;
+    padding: 8px 12px;
+    transition: border-color 0.2s ease;
+}
+
+.inputContainer:focus-within {
+    border-color: #155dfc;
+    outline: none;
+}
+
+.inputContainer.error {
+    border-color: #ef4444;
+}
+
+.inputContainer.success {
+    border-color: #10b981;
+}
+
+.input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #020618;
+}
+
+.input::placeholder {
+    color: #62748e;
+}
+
+.passwordToggle {
+    position: absolute;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #62748e;
+    transition: color 0.2s ease;
+}
+
+.passwordToggle:hover {
+    color: #020618;
+}
+
+.eyeIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.errorText {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ef4444;
+    margin-top: 2px;
+}

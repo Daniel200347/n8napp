@@ -1,0 +1,6 @@
+export { FooterAuth } from './FooterAuth';
+
+
+
+
+
