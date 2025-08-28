@@ -1,0 +1,26 @@
+.footer {
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #62748e;
+}
+
+.footerLink {
+  color: #62748e;
+  text-decoration: underline;
+}
+
+.footerLink:hover {
+  color: #155dfc;
+}
+
