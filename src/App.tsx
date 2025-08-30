@@ -1,5 +1,5 @@
 
-import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom'
+import {HashRouter as Router, Routes, Route, Navigate} from 'react-router-dom'
 import {LoginPage} from '@/sections/auth/LoginPage'
 import {RegistrationPage} from '@/sections/auth/RegistrationPage'
 import {SettingsPage} from '@/pages/SettingsPage'
