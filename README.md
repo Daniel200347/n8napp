@@ -1,69 +1,71 @@
-# React + TypeScript + Vite
+# N8N App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современное веб-приложение для автоматизации процессов, построенное на React, TypeScript и Vite.
 
-Currently, two official plugins are available:
+## Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Radix UI
+- React Router
+- Redux Toolkit
 
-## Expanding the ESLint configuration
+## Установка и запуск
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Установка зависимостей
+npm install
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Запуск в режиме разработки
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# Сборка для продакшена
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Предварительный просмотр сборки
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Деплой на GitHub Pages
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Создайте репозиторий на GitHub с именем `n8napp`
+2. Инициализируйте Git и подключите репозиторий:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/n8napp.git
+git push -u origin main
+```
+
+3. Установите gh-pages:
+```bash
+npm install
+```
+
+4. Запустите деплой:
+```bash
+npm run deploy
+```
+
+5. В настройках репозитория на GitHub:
+   - Перейдите в Settings → Pages
+   - В Source выберите "Deploy from a branch"
+   - Выберите ветку "gh-pages" и папку "/ (root)"
+   - Нажмите Save
+
+Ваше приложение будет доступно по адресу: `https://YOUR_USERNAME.github.io/n8napp/`
+
+## Структура проекта
+
+```
+src/
+├── components/     # Переиспользуемые компоненты
+├── pages/         # Страницы приложения
+├── sections/      # Секции страниц
+└── ui/           # UI компоненты
 ```
