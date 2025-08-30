@@ -4,7 +4,7 @@ import {Input} from '@/components/ui/Input';
 import {Button} from '@/components/ui/Button';
 import {Separator} from '@/components/ui/Separator';
 import {Logo} from '@/components/ui/Logo';
-import {GoogleIcon} from '@/components/ui/GoogleIcon';
+import {GoogleIcon} from '@/components/ui/Icons';
 import styles from './LoginForm.module.css';
 import { FooterAuth } from '@/components/ui/FooterAuth';
 

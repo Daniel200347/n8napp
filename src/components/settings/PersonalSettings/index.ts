@@ -1,1 +1,0 @@
-export { PersonalSettings } from './PersonalSettings'

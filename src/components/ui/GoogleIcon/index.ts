@@ -1,6 +1,0 @@
-export { GoogleIcon } from './GoogleIcon';
-
-
-
-
-

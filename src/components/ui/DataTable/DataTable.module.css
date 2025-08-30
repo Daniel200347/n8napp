@@ -1,0 +1,79 @@
+.tableContainer {
+  width: 100%;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 552px;
+  background-color: #FFFFFF;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #E2E8F0;
+  font-family: Inter, sans-serif;
+}
+
+.table th {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #020618;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.table thead {
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.table td {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #020618;
+}
+
+.checkboxHeader {
+  width: 52px;
+  padding: 16px 20px 16px 16px !important;
+}
+
+.checkboxCell {
+  padding: 16px 20px 16px 16px !important;
+}
+
+.actionsHeader {
+  width: 68px;
+  padding: 16px 16px !important;
+}
+
+.actionsCell {
+  width: 68px;
+  padding: 16px 16px 16px 16px !important;
+  text-align: right;
+}
+
+.tableRow:hover:not(.emptyRow) {
+  background-color: #F8FAFC;
+}
+
+.emptyRow {
+  border: none;
+  height: 552px;
+}
+
+.emptyCell {
+  border: none;
+  padding: 0 !important;
+  height: 100%;
+  width: 100%;
+}
