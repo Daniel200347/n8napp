@@ -1,0 +1,542 @@
+.statisticsPageContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 292px;
+  padding: 12px 12px 12px 0;
+  box-sizing: border-box;
+}
+
+.contentContainer {
+  width: 100%;
+  min-height: calc(100vh - 24px);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #020618;
+  margin: 0;
+}
+
+.statisticsSection {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Time Range Selector */
+.timeRangeSelector {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.timeRangeInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 304px;
+  transition: border-color 0.2s ease;
+}
+
+.timeRangeInput:hover {
+  border-color: #155dfc;
+}
+
+.timeRangeText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #020618;
+  flex: 1;
+}
+
+.timeRangeIcon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  transition: transform 0.2s ease;
+}
+
+.timeRangeInput:hover .timeRangeIcon {
+  opacity: 1;
+}
+
+.timeRangeIconRotated {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 4px;
+  padding: 4px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menuItem:hover {
+  background-color: #f1f5f9;
+}
+
+.menuItemActive {
+  background-color: #f1f5f9;
+}
+
+.menuItemText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #020618;
+}
+
+.checkIcon {
+  font-size: 12px;
+  color: #020618;
+  font-weight: 600;
+}
+
+/* Statistics Container */
+.statisticsContainer {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.statisticsGrid {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.statisticCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+  position: relative;
+  transform: translateY(0);
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.statisticCard:hover {
+  opacity: 1;
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+}
+
+.statisticCard:active {
+  transform: translateY(0);
+}
+
+.statisticCardActive {
+  border-bottom: 3px solid #155dfc;
+  opacity: 1;
+  animation: cardActivate 0.3s ease-out;
+}
+
+@keyframes cardActivate {
+  0% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.statisticHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statisticTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #020618;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.statisticSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #62748e;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.statisticValue {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #020618;
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: #e2e8f0;
+  margin: 0 1px;
+  flex-shrink: 0;
+}
+
+/* Chart Section */
+.chartSection {
+  padding: 20px;
+  height: 600px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.chartContainer {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lineChartContainer {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lineChart {
+  position: absolute;
+  left: 68px;
+  top: 72px;
+  bottom: 72px;
+  right: 20px;
+  width: calc(100% - 88px);
+}
+
+.yAxisLabels {
+  position: absolute;
+  left: 24px;
+  top: 72px;
+  bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+}
+
+.yAxisLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.yAxisText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #62748e;
+  width: 40px;
+  text-align: right;
+}
+
+.yAxisLine {
+  flex: 1;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+/* Grid Lines */
+.gridLines {
+  position: absolute;
+  left: 68px;
+  top: 72px;
+  bottom: 72px;
+  right: 20px;
+  width: calc(100% - 88px);
+  pointer-events: none;
+}
+
+.gridLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+.gridLine:nth-child(1) { top: 0%; }
+.gridLine:nth-child(2) { top: 25%; }
+.gridLine:nth-child(3) { top: 50%; }
+.gridLine:nth-child(4) { top: 75%; }
+.gridLine:nth-child(5) { top: 100%; }
+
+.chartBars {
+  position: absolute;
+  left: 68px;
+  top: 72px;
+  bottom: 72px;
+  right: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  width: calc(100% - 88px);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 40px;
+  height: 100%;
+  flex: 1;
+  max-width: 60px;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  min-height: 4px;
+  animation: barGrow 0.6s ease-out;
+}
+
+@keyframes barGrow {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bar:hover {
+  transform: scaleY(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.xAxisLabels {
+  position: absolute;
+  bottom: 20px;
+  left: 68px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 56px 0 72px;
+  width: calc(100% - 88px);
+  box-sizing: border-box;
+}
+
+.xAxisText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #62748e;
+  text-align: center;
+  width: 40px;
+  flex: 1;
+  max-width: 60px;
+}
+
+/* Legend */
+.legend {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.legendItem:hover {
+  opacity: 0.7;
+}
+
+.legendIcon {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legendText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #62748e;
+}
+
+.legendItemDisabled {
+  opacity: 0.4;
+}
+
+.legendItemDisabled .legendIcon {
+  opacity: 0.4;
+}
+
+.legendItemDisabled .legendText {
+  opacity: 0.4;
+}
+
+/* Tooltip */
+.tooltip {
+  position: fixed;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  pointer-events: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  min-width: 120px;
+}
+
+.tooltipDate {
+  font-weight: 600;
+  color: #020618;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.tooltipItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.tooltipItem:last-child {
+  margin-bottom: 0;
+}
+
+.tooltipLabel {
+  color: #62748e;
+  font-weight: 500;
+}
+
+.tooltipValue {
+  color: #020618;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .statisticsGrid {
+    flex-direction: column;
+  }
+  
+  .statisticCard {
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 60px;
+    padding: 8px;
+  }
+  
+  .contentContainer {
+    padding: 16px;
+  }
+  
+  .timeRangeInput {
+    width: 100%;
+  }
+  
+  .chartBars {
+    gap: 8px;
+  }
+  
+  .barGroup {
+    width: 30px;
+    max-width: 40px;
+  }
+  
+  .legend {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}

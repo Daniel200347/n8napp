@@ -20,41 +20,150 @@
   box-sizing: border-box;
 }
 
-.header {
-  margin-bottom: 40px;
+/* Header */
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 32px;
   width: 520px;
 }
 
 .title {
-  font-family: inherit;
+  font-family: Inter, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.333;
   color: #020618;
-  margin: 0 0 6px 0;
+  margin: 0;
 }
 
 .description {
-  font-family: inherit;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #62748E;
+  margin-bottom: 32px;
+  width: 520px;
+}
+
+/* Section Titles */
+.sectionTitle {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #020618;
+  margin: 0 0 24px 0;
+}
+
+.sectionTitle:first-of-type {
+  margin-top: 0;
+}
+
+/* Form Container */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 640px;
+  margin-bottom: 32px;
+}
+
+.formRow {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.input {
+  width: 100%;
+}
+
+/* Security Container */
+.securityContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 275px;
+  margin-bottom: 32px;
+}
+
+.passwordInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 46px;
+}
+
+.passwordTitle {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #020618;
+  margin: 0;
+}
+
+.passwordSubtitle {
+  font-family: Inter, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.428;
   color: #62748E;
   margin: 0;
+  white-space: nowrap;
 }
 
-.sectionsContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 640px;
-  gap: 32px;
+.changePasswordButton {
+  height: 32px;
+  padding: 6px 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  color: #0F172B;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.428;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  width: fit-content;
 }
 
+.changePasswordButton:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+/* Save Button */
 .saveButton {
-  align-self: flex-start;
-  width: auto;
-  margin-top: 40px;
+  height: 40px;
+  padding: 0 24px;
+  background-color: #155DFC;
+  color: #F8FAFC;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.428;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.saveButton:hover:not(:disabled) {
+  background-color: #0F4CD1;
+}
+
+.saveButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* Responsive */
@@ -69,5 +178,21 @@
     border-left: none;
     border-right: none;
     min-height: calc(100vh - 24px);
+  }
+
+  .headerContainer {
+    width: 100%;
+  }
+
+  .formContainer {
+    width: 100%;
+  }
+
+  .formRow {
+    flex-direction: column;
+  }
+
+  .securityContainer {
+    width: 100%;
   }
 }

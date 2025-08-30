@@ -5,6 +5,13 @@ import styles from './Sidebar.module.css'
 import { Logo } from '@/components/ui/Logo'
 import { Progress } from '@/components/ui/Progress'
 import { Avatar } from '@/components/ui/Avatar'
+import {
+  ChartIcon,
+  DashboardIcon,
+  TemplateIcon,
+  SettingsIcon
+} from '@/components/ui/Icons'
+import {LogoutIcon} from "@/components/ui/Icons";
 
 interface SidebarProps {
   className?: string
@@ -43,36 +50,32 @@ const MenuItem = ({ icon, label, href, isActive, className }: MenuItemProps) => 
   )
 }
 
-const DashedSquareIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect
-      x="2.5"
-      y="2.5"
-      width="15"
-      height="15"
-      rx="2"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeDasharray="3.5 3.5"
-    />
-  </svg>
-)
-
 const menuItems: MenuItemData[] = [
-  { id: 'overview', icon: <DashedSquareIcon />, label: 'Обзор', href: '/overview' },
-  { id: 'statistics', icon: <DashedSquareIcon />, label: 'Статистика', href: '/statistics' },
-  { id: 'templates', icon: <DashedSquareIcon />, label: 'Шаблоны', href: '/templates' },
-  { id: 'settings', icon: <DashedSquareIcon />, label: 'Настройки', href: '/settings' },
+  { id: 'overview', icon: <DashboardIcon />, label: 'Дашборд', href: '/dashboard' },
+  { id: 'statistics', icon: <ChartIcon />, label: 'Статистика', href: '/statistics' },
+  { id: 'templates', icon: <TemplateIcon />, label: 'Шаблоны', href: '/templates' },
+  { id: 'settings', icon: <SettingsIcon />, label: 'Настройки', href: '/settings' },
 ]
 
 export const Sidebar = ({ className }: SidebarProps) => {
   const location = useLocation()
+
+  const getIconWithColor = (iconType: string, isActive: boolean) => {
+    const color = isActive ? "#020618" : "#62748E";
+
+    switch (iconType) {
+      case 'overview':
+        return <DashboardIcon color={color} />;
+      case 'statistics':
+        return <ChartIcon color={color} />;
+      case 'templates':
+        return <TemplateIcon color={color} />;
+      case 'settings':
+        return <SettingsIcon color={color} />;
+      default:
+        return <DashboardIcon color={color} />;
+    }
+  };
 
   return (
     <aside className={clsx(styles.sidebar, className)}>
@@ -83,15 +86,18 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
       {/* Navigation Menu */}
       <nav className={styles.navigation}>
-        {menuItems.map((item) => (
-          <MenuItem
-            key={item.id}
-            icon={item.icon}
-            label={item.label}
-            href={item.href}
-            isActive={location.pathname === item.href}
-          />
-        ))}
+        {menuItems.map((item) => {
+          const isActive = location.pathname === item.href;
+          return (
+            <MenuItem
+              key={item.id}
+              icon={getIconWithColor(item.id, isActive)}
+              label={item.label}
+              href={item.href}
+              isActive={isActive}
+            />
+          );
+        })}
       </nav>
 
       {/* Usage Card */}
@@ -121,10 +127,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
       <div className={styles.profileSection}>
         <div className={styles.profileInfo}>
           <Avatar fallback="ИФ" size="md" />
-          <span className={styles.profileName}>Alena Support</span>
+          <span className={styles.profileName}>
+            Alena Support</span>
         </div>
         <button className={styles.profileMenuButton} aria-label="Profile menu">
-          <DashedSquareIcon />
+          <LogoutIcon  />
         </button>
       </div>
     </aside>

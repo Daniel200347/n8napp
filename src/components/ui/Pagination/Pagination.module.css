@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0;
+  justify-content: flex-end;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #020618;
+}
+
+.rowsSelector {
+  position: relative;
+  display: inline-block;
+}
+
+.rowsInputContainer {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.rowsInput {
+  width: 60px;
+  height: 36px;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #020618;
+  text-align: center;
+  outline: none;
+}
+
+.rowsInput:focus {
+  outline: none;
+}
+
+.rowsInput::-webkit-outer-spin-button,
+.rowsInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.rowsInput[type=number] {
+  -moz-appearance: textfield;
+}
+
+.rowsControls {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #E2E8F0;
+}
+
+.rowsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 18px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+  color: #64748B;
+}
+
+.rowsButton:hover:not(:disabled) {
+  background-color: #F1F5F9;
+  color: #0F172B;
+}
+
+.rowsButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #0F172B;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.navButton:hover:not(.disabled) {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.navButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #94A3B8;
+}

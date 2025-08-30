@@ -3,6 +3,7 @@ import styles from './Checkbox.module.css';
 
 interface CheckboxProps {
   checked?: boolean;
+  indeterminate?: boolean;
   disabled?: boolean;
   onChange?: (checked: boolean) => void;
   className?: string;
@@ -10,6 +11,7 @@ interface CheckboxProps {
 
 export const Checkbox: React.FC<CheckboxProps> = ({ 
   checked = false, 
+  indeterminate = false,
   disabled = false, 
   onChange,
   className 
@@ -21,13 +23,19 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   };
 
   return (
-    <label className={`${styles.checkbox} ${className || ''}`}>
+    <label className={`${styles.checkbox} ${className || ''}`} data-checkbox="true">
       <input
         type="checkbox"
         checked={checked}
+        ref={(input) => {
+          if (input) {
+            input.indeterminate = indeterminate;
+          }
+        }}
         disabled={disabled}
         onChange={handleChange}
         className={styles.checkboxInput}
+        data-checkbox="true"
       />
       <div className={`${styles.checkboxControl} ${checked ? styles.checked : ''} ${disabled ? styles.disabled : ''}`}>
         {checked && (

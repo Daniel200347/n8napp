@@ -1,0 +1,362 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  height: 97.4%;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 12px 12px 12px 0;
+  background-color: #FFFFFF;
+  padding: 24px;
+}
+
+
+
+.stepContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.stepHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stepTitle {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0F172B;
+  margin: 0;
+}
+
+.stepDescription {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+}
+
+.addButton{
+  margin-left: auto;
+}
+
+.deleteButton {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E2E8F0;
+  color: #64748B;
+  transition: all 0.2s ease;
+}
+
+.deleteButton:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+  color: #475569;
+}
+
+.serviceIcon {
+  flex-shrink: 0;
+}
+
+.serviceInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.serviceName {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0F172B;
+  margin: 0;
+}
+
+.serviceDescription {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.searchInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus-within {
+  border-color: #155DFC;
+  box-shadow: 0 0 0 3px rgba(21, 93, 252, 0.1);
+}
+
+.searchIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.searchField {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #0F172B;
+  line-height: 1.5;
+}
+
+.searchField::placeholder {
+  color: #94A3B8;
+}
+
+.searchField[readonly] {
+  background-color: #F8FAFC;
+  color: #0F172B;
+  cursor: default;
+}
+
+.dropdownIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.formFields{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 4px;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background-color: #F8FAFC;
+}
+
+.dropdownItem:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.dropdownItem:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.noResults {
+  padding: 16px;
+  text-align: center;
+  color: #64748B;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+}
+
+.helpSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.helpText {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #64748B;
+}
+
+.helpLink {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  color: #155DFC;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.helpLink:hover {
+  color: #0F4CD1;
+}
+
+.tabsContainer {
+  margin-bottom: 24px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.tab {
+  padding: 12px 24px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748B;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: #0F172B;
+}
+
+.tab.active {
+  color: #155DFC;
+  border-bottom-color: #155DFC;
+}
+
+
+
+/* Новые стили для третьего этапа */
+.tabsContainer {
+  margin-bottom: 16px;
+}
+
+.tabs {
+  display: flex;
+  background: #F1F5F9;
+  border-radius: 12px;
+  padding: 4px;
+  gap: 8px;
+  width: fit-content;
+}
+
+.tab {
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #62748E;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab.activeTab {
+  background: #FFFFFF;
+  color: #020618;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.detailLabel {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #62748E;
+}
+
+.detailValue {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #020618;
+}
+
+.deleteButton {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0F172B;
+}
+
+.saveButton {
+  background: #155DFC;
+  color: #FFFFFF;
+}
+
+.saveButton:disabled {
+  background: #155DFC;
+  opacity: 0.5;
+  color: #F8FAFC;
+}

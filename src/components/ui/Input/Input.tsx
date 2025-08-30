@@ -1,4 +1,5 @@
-import { useState, forwardRef, InputHTMLAttributes } from 'react';
+import { useState, forwardRef } from 'react';
+import type { InputHTMLAttributes } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import styles from './Input.module.css';
 

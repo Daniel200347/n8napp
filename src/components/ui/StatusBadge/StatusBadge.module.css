@@ -1,0 +1,72 @@
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: center;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+/* Автоматизации */
+.enabled {
+  background-color: #ECFDF5;
+  color: #009966;
+  border-color: #A4F4CF;
+}
+
+.disabled {
+  background-color: #FEF2F2;
+  color: #E7000B;
+  border-color: #FFC9C9;
+}
+
+/* Запуски */
+.completed,
+.success {
+  background-color: #F0FDF4;
+  color: #059669;
+  border-color: #BBF7D0;
+}
+
+.failed,
+.error {
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border-color: #FECACA;
+}
+
+.running {
+  background-color: #EFF6FF;
+  color: #2563EB;
+  border-color: #BFDBFE;
+}
+
+.pending {
+  background-color: #FFFBEB;
+  color: #D97706;
+  border-color: #FED7AA;
+}
+
+/* Ключи */
+.connected {
+  background-color: #F0FDF4;
+  color: #166534;
+  border-color: #BBF7D0;
+}
+
+.disconnected {
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border-color: #FECACA;
+}
+
+.requires_setup {
+  background-color: #FFFBEB;
+  color: #D97706;
+  border-color: #FED7AA;
+}
