@@ -30,35 +30,19 @@ npm run preview
 
 ## Деплой на GitHub Pages
 
-1. Создайте репозиторий на GitHub с именем `n8napp`
-2. Инициализируйте Git и подключите репозиторий:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/n8napp.git
-git push -u origin main
-```
-
-3. Установите gh-pages:
-```bash
-npm install
-```
-
-4. Запустите деплой:
+1. Убедитесь, что репозиторий публичный
+2. Запустите деплой:
 ```bash
 npm run deploy
 ```
 
-5. В настройках репозитория на GitHub:
+3. В настройках репозитория на GitHub:
    - Перейдите в Settings → Pages
    - В Source выберите "Deploy from a branch"
    - Выберите ветку "gh-pages" и папку "/ (root)"
    - Нажмите Save
 
-Ваше приложение будет доступно по адресу: `https://YOUR_USERNAME.github.io/n8napp/`
+Ваше приложение будет доступно по адресу: `https://daniel200347.github.io/n8napp/`
 
 ## Структура проекта
 
@@ -69,3 +53,9 @@ src/
 ├── sections/      # Секции страниц
 └── ui/           # UI компоненты
 ```
+
+## Важные замечания
+
+- Используется HashRouter для совместимости с GitHub Pages
+- Базовый путь настроен на `/n8napp/`
+- Добавлен файл 404.html для правильной работы роутинга
