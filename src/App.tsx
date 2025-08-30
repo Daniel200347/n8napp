@@ -1,6 +1,5 @@
 
-import {HashRouter as Router, Routes, Route, Navigate} from 'react-router-dom'
-import {LoginPage} from '@/sections/auth/LoginPage'
+import {HashRouter as Router, Routes, Route} from 'react-router-dom'
 import {RegistrationPage} from '@/sections/auth/RegistrationPage'
 import {SettingsPage} from '@/pages/SettingsPage'
 import {DashboardPage} from '@/pages/DashboardPage'
@@ -9,8 +8,8 @@ import {TemplatesPage} from '@/pages/TemplatesPage'
 
 // Простая тестовая страница для проверки
 const TestPage = () => (
-  <div style={{ 
-    padding: '20px', 
+  <div style={{
+    padding: '20px',
     fontFamily: 'Inter, sans-serif',
     backgroundColor: '#f5f5f5',
     minHeight: '100vh',
@@ -21,10 +20,10 @@ const TestPage = () => (
   }}>
     <h1 style={{ color: '#333', marginBottom: '20px' }}>N8N App работает! 🎉</h1>
     <p style={{ color: '#666', marginBottom: '10px' }}>Страница входа загружается...</p>
-    <div style={{ 
-      backgroundColor: 'white', 
-      padding: '30px', 
-      borderRadius: '8px', 
+    <div style={{
+      backgroundColor: 'white',
+      padding: '30px',
+      borderRadius: '8px',
       boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
       minWidth: '300px'
     }}>
@@ -34,8 +33,8 @@ const TestPage = () => (
           <label style={{ display: 'block', marginBottom: '5px', fontWeight: '500' }}>
             Email:
           </label>
-          <input 
-            type="email" 
+          <input
+            type="email"
             placeholder="Введите email"
             style={{
               width: '100%',
@@ -50,8 +49,8 @@ const TestPage = () => (
           <label style={{ display: 'block', marginBottom: '5px', fontWeight: '500' }}>
             Пароль:
           </label>
-          <input 
-            type="password" 
+          <input
+            type="password"
             placeholder="Введите пароль"
             style={{
               width: '100%',
@@ -62,7 +61,7 @@ const TestPage = () => (
             }}
           />
         </div>
-        <button 
+        <button
           type="submit"
           style={{
             width: '100%',
@@ -84,8 +83,8 @@ const TestPage = () => (
 
 // Простая главная страница
 const HomePage = () => (
-  <div style={{ 
-    padding: '20px', 
+  <div style={{
+    padding: '20px',
     fontFamily: 'Inter, sans-serif',
     backgroundColor: '#f5f5f5',
     minHeight: '100vh',
@@ -98,13 +97,13 @@ const HomePage = () => (
     <p style={{ color: '#666', marginBottom: '30px', textAlign: 'center' }}>
       Это главная страница приложения. Выберите раздел для продолжения.
     </p>
-    <div style={{ 
-      display: 'flex', 
-      gap: '15px', 
+    <div style={{
+      display: 'flex',
+      gap: '15px',
       flexWrap: 'wrap',
       justifyContent: 'center'
     }}>
-      <a 
+      <a
         href="#/login"
         style={{
           padding: '12px 24px',
@@ -117,7 +116,7 @@ const HomePage = () => (
       >
         Войти
       </a>
-      <a 
+      <a
         href="#/registration"
         style={{
           padding: '12px 24px',
@@ -130,7 +129,7 @@ const HomePage = () => (
       >
         Регистрация
       </a>
-      <a 
+      <a
         href="#/templates"
         style={{
           padding: '12px 24px',
