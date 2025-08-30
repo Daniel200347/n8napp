@@ -19,7 +19,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    background: #ffffff;
+    background: transparent;
     border: 1px solid #e2e8f0;
     min-height: 40px;
     max-height: 40px;
@@ -29,8 +29,9 @@
 }
 
 .inputContainer:focus-within {
-    border-color: #155dfc;
+    border-color: #e2e8f0;
     outline: none;
+    box-shadow: none;
 }
 
 .inputContainer.error {
@@ -51,6 +52,16 @@
     font-size: 14px;
     line-height: 20px;
     color: #020618;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.input:focus-visible {
+    outline: none;
+    box-shadow: none;
 }
 
 .input::placeholder {

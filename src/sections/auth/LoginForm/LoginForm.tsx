@@ -58,7 +58,7 @@ export const LoginForm = () => {
                                 type="email"
                                 label="Электронная почта"
                                 placeholder="Введите электронную почту"
-                                value={formData.email}
+                                value={'example@mail.ru'}
                                 onChange={handleInputChange}
                                 required
                             />

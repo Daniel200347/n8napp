@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/n8napp/', // Базовый путь для GitHub Pages
+  base: '/n8napp/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
