@@ -49,18 +49,15 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
     const lastDay = new Date(year, month + 1, 0);
     const days: Date[] = [];
 
-    // Добавляем дни предыдущего месяца для заполнения первой недели
     const firstDayOfWeek = firstDay.getDay();
     for (let i = firstDayOfWeek - 1; i >= 0; i--) {
       days.push(new Date(year, month, -i));
     }
 
-    // Добавляем дни текущего месяца
     for (let i = 1; i <= lastDay.getDate(); i++) {
       days.push(new Date(year, month, i));
     }
 
-    // Добавляем дни следующего месяца для заполнения последней недели
     const lastDayOfWeek = lastDay.getDay();
     for (let i = 1; i <= 6 - lastDayOfWeek; i++) {
       days.push(new Date(year, month + 1, i));
@@ -73,15 +70,12 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
     const formattedDate = formatDate(date);
     
     if (!selectedRange.startDate || (selectedRange.startDate && selectedRange.endDate)) {
-      // Если нет начальной даты или есть обе даты, начинаем новый диапазон
       setSelectedRange({ startDate: formattedDate, endDate: '' });
     } else {
-      // Если есть начальная дата, устанавливаем конечную
       const startDate = new Date(selectedRange.startDate.split('.').reverse().join('-'));
       const endDate = date;
       
       if (endDate < startDate) {
-        // Если конечная дата меньше начальной, меняем местами
         setSelectedRange({ startDate: formattedDate, endDate: selectedRange.startDate });
       } else {
         setSelectedRange({ startDate: selectedRange.startDate, endDate: formattedDate });

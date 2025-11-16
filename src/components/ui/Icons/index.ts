@@ -1,6 +1,10 @@
 export { BookIcon } from './BookIcon';
+export { BookIconNew } from './BookIconNew';
 export { ChevronDownIcon } from './ChevronDownIcon';
 export { CloseIcon } from './CloseIcon';
+export { MinusIcon } from './MinusIcon';
+export { ArrowIcon } from './ArrowIcon';
+export { HandIcon } from './HandIcon';
 export { FilterIcon } from './FilterIcon';
 export { GoogleIcon } from './GoogleIcon';
 export { InfoIcon } from './InfoIcon';
@@ -14,4 +18,16 @@ export { SettingsIcon } from './SettingsIcon';
 export { CalendarIcon } from './CalendarIcon';
 export { DeleteIcon } from './DeleteIcon';
 export { LogoutIcon } from './LogoutIcon';
+export { HistoryIcon } from './HistoryIcon';
+export { LinkIcon } from './LinkIcon';
+export { DotsVerticalIcon } from './DotsVerticalIcon';
+export { PowerIcon } from './PowerIcon';
+export { SparklesIcon } from './SparklesIcon';
+export { DangerCircleIcon } from './DangerCircleIcon';
+export { CheckCircleIcon } from './CheckCircleIcon';
+export { LoadingIcon } from './LoadingIcon';
+export { TelegramIcon } from './TelegramIcon';
+export { SendIcon } from './SendIcon';
+export { AIAssistantIcon } from './AIAssistantIcon';
+export { ClockIcon } from './ClockIcon';
 

@@ -1,0 +1,92 @@
+.controlsContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.zoomControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.modeControls {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.zoomButton {
+  width: 16px;
+  height: 16px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer !important;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.zoomButton:hover {
+  transform: scale(1.1);
+}
+
+.zoomButton.active {
+  background-color: #f1f5f9;
+  border-radius: 4px;
+}
+
+.zoomIcon {
+  width: 16px;
+  height: 16px;
+  color: #020618;
+}
+
+.modeButton {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer !important;
+  transition: all 0.2s ease;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.modeButton:hover {
+  background-color: #f8fafc;
+}
+
+.modeButton.active {
+  background-color: #f1f5f9;
+}
+
+.modeIcon {
+  width: 20px;
+  height: 20px;
+  color: #020618;
+}
+
+.zoomPercentage {
+  font-size: 14px;
+  font-weight: 500;
+  color: #020618;
+  min-width: 32px;
+  text-align: center;
+}

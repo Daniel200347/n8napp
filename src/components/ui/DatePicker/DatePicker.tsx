@@ -48,18 +48,15 @@ export const DatePicker: React.FC<DatePickerProps> = ({
     const lastDay = new Date(year, month + 1, 0);
     const days: Date[] = [];
 
-    // Добавляем дни предыдущего месяца для заполнения первой недели
     const firstDayOfWeek = firstDay.getDay();
     for (let i = firstDayOfWeek - 1; i >= 0; i--) {
       days.push(new Date(year, month, -i));
     }
 
-    // Добавляем дни текущего месяца
     for (let i = 1; i <= lastDay.getDate(); i++) {
       days.push(new Date(year, month, i));
     }
 
-    // Добавляем дни следующего месяца для заполнения последней недели
     const lastDayOfWeek = lastDay.getDay();
     for (let i = 1; i <= 6 - lastDayOfWeek; i++) {
       days.push(new Date(year, month + 1, i));

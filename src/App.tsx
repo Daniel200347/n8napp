@@ -6,8 +6,8 @@ import {SettingsPage} from '@/pages/SettingsPage'
 import {DashboardPage} from '@/pages/DashboardPage'
 import {StatisticsPage} from '@/pages/StatisticsPage'
 import {TemplatesPage} from '@/pages/TemplatesPage'
+import {EditorPage} from '@/pages/EditorPage'
 
-// Простая главная страница
 const HomePage = () => (
     <LoginPage/>
 )
@@ -22,6 +22,7 @@ function App() {
                 <Route path="/statistics" element={<StatisticsPage/>}/>
                 <Route path="/templates" element={<TemplatesPage/>}/>
                 <Route path="/settings" element={<SettingsPage/>}/>
+                <Route path="/editor" element={<EditorPage/>}/>
                 <Route path="/" element={<HomePage/>}/>
             </Routes>
         </Router>

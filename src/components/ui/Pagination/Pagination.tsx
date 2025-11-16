@@ -20,7 +20,6 @@ export const Pagination: React.FC<PaginationProps> = ({
 }) => {
   const [inputValue, setInputValue] = useState(rowsPerPage.toString());
 
-  // Обновляем inputValue при изменении rowsPerPage извне
   useEffect(() => {
     setInputValue(rowsPerPage.toString());
   }, [rowsPerPage]);

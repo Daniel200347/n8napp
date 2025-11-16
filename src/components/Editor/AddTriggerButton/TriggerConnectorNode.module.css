@@ -1,0 +1,44 @@
+.nodeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connectorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.connectionLine {
+  width: 2px;
+  height: 20px;
+  background: #E2E8F0;
+  margin: 0;
+}
+
+.plusButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plusButton:hover {
+  border-color: #155DFC;
+  background: #155DFC;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(21, 93, 252, 0.2);
+}
+
+.plusButton:active {
+  transform: scale(0.95);
+}
+
