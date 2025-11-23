@@ -22,12 +22,12 @@ export const automationsService = {
 
   async createAutomation(data: Omit<Automation, 'id'>): Promise<Automation> {
     const newAutomation: Automation = {
+      ...data,
       id: Date.now().toString(),
       name: data.name || 'Новая автоматизация',
-      lastRun: 'Никогда',
-      status: 'disabled',
-      isActive: false,
-      ...data,
+      lastRun: data.lastRun || 'Никогда',
+      status: data.status || 'disabled',
+      isActive: data.isActive ?? false,
     };
     return new Promise((resolve) => {
       setTimeout(() => resolve(newAutomation), 300);
@@ -45,13 +45,13 @@ export const automationsService = {
     });
   },
 
-  async deleteAutomation(id: string): Promise<void> {
+  async deleteAutomation(_id: string): Promise<void> {
     return new Promise((resolve) => {
       setTimeout(() => resolve(), 300);
     });
   },
-  async duplicateAutomation(id: string): Promise<Automation> {
-    const automation = mockAutomationsData.find(a => a.id === id);
+  async duplicateAutomation(_id: string): Promise<Automation> {
+    const automation = mockAutomationsData.find(a => a.id === _id);
     if (!automation) {
       throw new Error('Автоматизация не найдена');
     }

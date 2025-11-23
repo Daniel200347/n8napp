@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/Button';
 import { PlusIcon } from '@/components/ui/Icons';
-import { SearchInput, StatusFilter, DateRangePicker, CreateAutomationDropdown } from '@/components/ui';
+import { SearchInput, StatusFilter, DateRangePicker } from '@/components/ui';
 import styles from '../DashboardPage.module.css';
 
 interface FiltersBarProps {
@@ -23,8 +23,6 @@ interface FiltersBarProps {
 
 export const FiltersBar: React.FC<FiltersBarProps> = ({
   activeTab,
-  searchQuery,
-  statusFilters,
   selectedDateRange,
   selectedRowsCount,
   selectedApiKeyRowsCount,
@@ -35,7 +33,6 @@ export const FiltersBar: React.FC<FiltersBarProps> = ({
   onDeleteClick,
   onDeleteRunsClick,
   onCreateApiKey,
-  onCreateAutomation,
 }) => {
   return (
     <div className={styles.filtersContainer}>

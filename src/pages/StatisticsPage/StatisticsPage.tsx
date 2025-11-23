@@ -17,7 +17,7 @@ export const StatisticsPage = () => {
   const [showFailed, setShowFailed] = useState(true);
   const [tooltip, setTooltip] = useState<TooltipData | null>(null);
 
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const chartData = generateChartData(selectedTimeRange);
   const lineChartData = generateLineChartData(selectedTimeRange);
@@ -26,7 +26,7 @@ export const StatisticsPage = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as HTMLElement)) {
         setIsDropdownOpen(false);
       }
     };

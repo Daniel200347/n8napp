@@ -1,5 +1,5 @@
 import React from 'react';
-import type { ChartData, TooltipData } from '../types';
+import type { ChartData } from '../types';
 import styles from '../StatisticsPage.module.css';
 
 interface BarChartProps {

@@ -41,7 +41,7 @@ export const ZoomControls: React.FC<ZoomControlsProps> = ({
       const isInputFocused = activeElement && (
         activeElement.tagName === 'INPUT' || 
         activeElement.tagName === 'TEXTAREA' || 
-        activeElement.contentEditable === 'true'
+        (activeElement as HTMLElement).contentEditable === 'true'
       );
 
       if (isInputFocused) return;

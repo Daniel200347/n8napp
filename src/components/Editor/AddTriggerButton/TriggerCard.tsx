@@ -21,7 +21,6 @@ interface TriggerCardProps {
 }
 
 export const TriggerCard: React.FC<TriggerCardProps> = ({
-  id,
   number,
   name,
   serviceName,
@@ -32,7 +31,6 @@ export const TriggerCard: React.FC<TriggerCardProps> = ({
   onToggle,
   onDelete,
   onRun,
-  onEnable,
   onIconClick,
   isViewMode = false
 }) => {

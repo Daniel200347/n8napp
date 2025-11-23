@@ -10,7 +10,7 @@ import styles from './TemplatesPage.module.css';
 export const TemplatesPage = () => {
   const [selectedTemplate, setSelectedTemplate] = useState<(typeof templates)[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { searchQuery, categoryFilters, filteredTemplates, setSearchQuery, setCategoryFilters } =
+  const { filteredTemplates, setSearchQuery, setCategoryFilters } =
     useTemplateFiltering(templates);
 
   const handleInfoClick = (template: typeof templates[0]) => {

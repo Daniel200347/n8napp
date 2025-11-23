@@ -28,7 +28,6 @@ interface TriggerFormData {
 
 export const TriggerConfirmationModal: React.FC<TriggerConfirmationModalProps> = ({
   isOpen,
-  onClose,
   triggerName,
   serviceName,
   serviceIcon,

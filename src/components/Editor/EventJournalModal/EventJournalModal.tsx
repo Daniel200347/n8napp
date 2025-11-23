@@ -42,7 +42,7 @@ export const EventJournalModal: React.FC<EventJournalModalProps> = ({
     const handleClickOutside = (event: MouseEvent) => {
       if (openMenuId) {
         const menuRef = menuRefs.current[openMenuId];
-        if (menuRef && !menuRef.contains(event.target as Node)) {
+        if (menuRef && !menuRef.contains(event.target as HTMLElement)) {
           setOpenMenuId(null);
         }
       }
@@ -476,12 +476,12 @@ export const EventJournalModal: React.FC<EventJournalModalProps> = ({
                       handleMenuToggle(node.id);
                     }}
                   >
-                    <DotsVerticalIcon width={16} height={16} />
+                    <DotsVerticalIcon size={16} />
                   </button>
 
                   {openMenuId === node.id && (
                     <div
-                      ref={(el) => menuRefs.current[node.id] = el}
+                      ref={(el) => { if (el) menuRefs.current[node.id] = el; }}
                       className={styles.dropdownMenu}
                     >
                       <button

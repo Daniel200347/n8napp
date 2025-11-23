@@ -22,7 +22,6 @@ export const TopControls: React.FC<TopControlsProps> = ({
   viewingVersion,
   onDuplicateVersion,
   onUseVersion,
-  onExitViewMode,
   onPublish,
   canPublish = false
 }) => {
@@ -31,7 +30,7 @@ export const TopControls: React.FC<TopControlsProps> = ({
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as HTMLElement)) {
         setIsDropdownOpen(false);
       }
     };

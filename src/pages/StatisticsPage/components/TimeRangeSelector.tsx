@@ -1,7 +1,6 @@
 import React from 'react';
 import { ChevronDownIcon } from '@/components/ui/Icons';
 import { timeRanges } from '../config/constants';
-import type { TimeRange } from '../types';
 import styles from '../StatisticsPage.module.css';
 
 interface TimeRangeSelectorProps {
@@ -9,7 +8,7 @@ interface TimeRangeSelectorProps {
   isDropdownOpen: boolean;
   onToggle: () => void;
   onSelect: (rangeId: string) => void;
-  dropdownRef: React.RefObject<HTMLDivElement>;
+  dropdownRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export const TimeRangeSelector: React.FC<TimeRangeSelectorProps> = ({

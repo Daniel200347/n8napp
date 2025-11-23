@@ -88,11 +88,10 @@ export const AutomationNode: React.FC<AutomationNodeProps> = ({ data }) => {
           )}
         </div>
         
-        <div className={styles.controls}>
+        <div className={styles.controls} ref={dropdownRef}>
           <button 
             className={styles.dropdownButton}
             onClick={handleDropdownToggle}
-            ref={dropdownRef}
           >
             <ChevronDownIcon className={styles.dropdownIcon} />
           </button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import type { LineChartData, TooltipData } from '../types';
+import type { LineChartData } from '../types';
 import styles from '../StatisticsPage.module.css';
 
 interface LineChartProps {
