@@ -18,7 +18,7 @@ export const runsService = {
       setTimeout(() => resolve(run), 200);
     });
   },
-  async deleteRun(id: string): Promise<void> {
+  async deleteRun(_id: string): Promise<void> {
     return new Promise((resolve) => {
       setTimeout(() => resolve(), 300);
     });

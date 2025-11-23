@@ -16,7 +16,6 @@ export const Notification: React.FC<NotificationProps> = ({
   title,
   actionText = 'Подробнее',
   onAction,
-  onClose,
   isVisible = true
 }) => {
   if (!isVisible) return null;
@@ -27,11 +26,6 @@ export const Notification: React.FC<NotificationProps> = ({
     }
   };
 
-  const handleClose = () => {
-    if (onClose) {
-      onClose();
-    }
-  };
 
   const renderIcon = () => {
     switch (type) {

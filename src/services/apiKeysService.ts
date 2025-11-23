@@ -51,7 +51,7 @@ export const apiKeysService = {
     });
   },
 
-  async deleteApiKey(id: string): Promise<void> {
+  async deleteApiKey(_id: string): Promise<void> {
     return new Promise((resolve) => {
       setTimeout(() => resolve(), 300);
     });

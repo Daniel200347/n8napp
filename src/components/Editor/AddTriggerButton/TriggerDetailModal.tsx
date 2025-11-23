@@ -71,7 +71,6 @@ export const TriggerDetailModal: React.FC<TriggerDetailModalProps> = ({
   isOpen,
   serviceName,
   serviceIconColor,
-  triggerCount,
   onClose,
   onBack,
   onTriggerSelect,

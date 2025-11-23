@@ -74,7 +74,7 @@ export const TriggerNode: React.FC<TriggerNodeProps> = ({ data }) => {
           serviceName={data.trigger.serviceName}
           serviceIcon={data.trigger.serviceIcon}
           status={data.trigger.status}
-          onEdit={data.onEdit}
+          onEdit={() => {}}
           onDuplicate={() => {}}
           onToggle={() => {}}
           onDelete={handleDeleteTrigger}

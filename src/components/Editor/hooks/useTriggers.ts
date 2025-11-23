@@ -84,7 +84,7 @@ export interface UseTriggersReturn {
 }
 
 export const useTriggers = ({
-  nodes,
+  nodes: _nodes,
   setNodes,
   setEdges,
   isViewMode,

@@ -1,5 +1,4 @@
 import type { TableColumn } from '@/components/ui/DataTable';
-import type { Automation, RunRow, ApiKey } from '../types';
 import { StatusBadge, Switch, Tooltip } from '@/components/ui';
 
 export const createAutomationColumns = (
@@ -10,10 +9,10 @@ export const createAutomationColumns = (
     header: 'Название',
     width: '848px',
     className: 'nameCell',
-    render: (value: unknown, row: Automation) => (
+    render: (value: unknown, row: { id: string; [key: string]: unknown }) => (
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <span>{value as string}</span>
-        {row.isDuplicated && (
+        {(row as { isDuplicated?: boolean }).isDuplicated && (
           <span
             style={{
               fontSize: '12px',

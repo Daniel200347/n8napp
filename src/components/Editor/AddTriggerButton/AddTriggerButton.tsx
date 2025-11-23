@@ -3,7 +3,7 @@ import { PlusIcon } from '../../ui/Icons';
 import { TriggerModal } from './TriggerModal';
 import { TriggerConfirmationModal } from './TriggerConfirmationModal';
 import { TriggerCard } from './TriggerCard';
-import { TriggerStatus, Trigger } from './types';
+import type { Trigger } from './types';
 import styles from './AddTriggerButton.module.css';
 
 interface AddTriggerButtonProps {
