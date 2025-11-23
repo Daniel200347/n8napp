@@ -1,0 +1,112 @@
+.editor {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  background: #F1F5F9;
+  transition: all 0.3s ease-in-out;
+}
+
+.editor.aiAssistantOpen {
+  padding-right: 400px;
+}
+
+.editor.eventJournalOpen {
+  padding-left: 400px;
+}
+
+.editor.versionHistoryOpen {
+  padding-right: 400px;
+}
+
+.editor.sidebarOpen {
+  padding-right: 400px;
+}
+
+.flow {
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  flex: 1;
+}
+
+.flow.panMode {
+  cursor: grab;
+}
+
+.flow.panMode:active {
+  cursor: grabbing;
+}
+
+/* Принудительно переопределяем курсоры ReactFlow для режима панорамирования */
+.flow.panMode .react-flow__pane,
+.flow.panMode .react-flow__renderer,
+.flow.panMode .react-flow__viewport,
+.flow.panMode .react-flow__container,
+.flow.panMode .react-flow__node,
+.flow.panMode .react-flow__edge,
+.flow.panMode .react-flow__edges,
+.flow.panMode .react-flow__background {
+  cursor: grab !important;
+}
+
+.flow.panMode:active .react-flow__pane,
+.flow.panMode:active .react-flow__renderer,
+.flow.panMode:active .react-flow__viewport,
+.flow.panMode:active .react-flow__container,
+.flow.panMode:active .react-flow__node,
+.flow.panMode:active .react-flow__edge,
+.flow.panMode:active .react-flow__edges,
+.flow.panMode:active .react-flow__background {
+  cursor: grabbing !important;
+}
+
+/* Дополнительные селекторы для более надежного переопределения */
+.flow.panMode,
+.flow.panMode * {
+  cursor: grab !important;
+}
+
+.flow.panMode:active,
+.flow.panMode:active * {
+  cursor: grabbing !important;
+}
+
+/* Обычный режим - стрелка */
+.flow:not(.panMode) .react-flow__pane,
+.flow:not(.panMode) .react-flow__renderer,
+.flow:not(.panMode) .react-flow__viewport,
+.flow:not(.panMode) .react-flow__container,
+.flow:not(.panMode) .react-flow__node,
+.flow:not(.panMode) .react-flow__edge,
+.flow:not(.panMode) .react-flow__edges,
+.flow:not(.panMode) .react-flow__background {
+  cursor: default;
+}
+
+/* Стили для react-flow */
+.react-flow__node {
+  font-family: inherit;
+}
+
+.react-flow__background {
+  background: #F1F5F9;
+}
+
+.react-flow__controls {
+  bottom: 20px;
+  left: 20px;
+  top: auto;
+  right: auto;
+}
+
+.react-flow__minimap {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Стили для интерактивных элементов */
+.react-flow__controls button,
+.react-flow__controls .react-flow__controls-button {
+  cursor: pointer;
+}

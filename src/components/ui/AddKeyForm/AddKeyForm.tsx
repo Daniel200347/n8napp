@@ -28,8 +28,7 @@ interface AddKeyFormProps {
 export const AddKeyForm: React.FC<AddKeyFormProps> = ({ onClose, onAddKey, onDeleteKey, selectedKey }) => {
   const [currentStep, setCurrentStep] = useState(selectedKey ? 3 : 1);
   const [activeTab, setActiveTab] = useState<'connection' | 'details'>('connection');
-  
-  // Если передан selectedKey, переходим на третий этап, иначе на первый
+
   React.useEffect(() => {
     if (selectedKey) {
       setCurrentStep(3);
@@ -38,7 +37,6 @@ export const AddKeyForm: React.FC<AddKeyFormProps> = ({ onClose, onAddKey, onDel
     }
   }, [selectedKey]);
 
-  // Заполняем данные формы при переходе на третий этап (просмотр существующего ключа)
   React.useEffect(() => {
     if (currentStep === 3 && selectedKey) {
       setFormData({
@@ -50,7 +48,6 @@ export const AddKeyForm: React.FC<AddKeyFormProps> = ({ onClose, onAddKey, onDel
         endpoint: selectedKey.endpoint || 'https://yandexgpt.api.cognitive.com',
       });
     } else if (currentStep === 1) {
-      // Сбрасываем данные формы при переходе на первый этап
       setFormData({
         service: '',
         name: 'Учетная запись YandexGPT',
@@ -112,7 +109,6 @@ export const AddKeyForm: React.FC<AddKeyFormProps> = ({ onClose, onAddKey, onDel
   };
 
   const handleCloseSideMenu = () => {
-    // Всегда сбрасываем состояние при закрытии
     setCurrentStep(1);
     setFormData({
       service: '',
@@ -133,17 +129,17 @@ export const AddKeyForm: React.FC<AddKeyFormProps> = ({ onClose, onAddKey, onDel
         id: Date.now().toString(),
         name: formData.name || formData.resourceName,
         service: services.find(s => s.id === formData.service)?.name || formData.service,
-        added: new Date().toLocaleString('ru-RU', { 
-          day: 'numeric', 
-          month: 'long', 
-          hour: '2-digit', 
-          minute: '2-digit' 
+        added: new Date().toLocaleString('ru-RU', {
+          day: 'numeric',
+          month: 'long',
+          hour: '2-digit',
+          minute: '2-digit'
         }),
-        lastUpdate: new Date().toLocaleString('ru-RU', { 
-          day: 'numeric', 
-          month: 'long', 
-          hour: '2-digit', 
-          minute: '2-digit' 
+        lastUpdate: new Date().toLocaleString('ru-RU', {
+          day: 'numeric',
+          month: 'long',
+          hour: '2-digit',
+          minute: '2-digit'
         }),
         status: 'connected' as const
       };
@@ -222,7 +218,7 @@ export const AddKeyForm: React.FC<AddKeyFormProps> = ({ onClose, onAddKey, onDel
 
   const renderStep2 = () => {
     const selectedService = services.find(s => s.id === formData.service);
-    
+
     return (
       <div className={styles.stepContent}>
         <div className={styles.stepHeader}>

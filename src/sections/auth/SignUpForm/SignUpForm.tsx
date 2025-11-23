@@ -84,7 +84,7 @@ export const SignUpForm = () => {
                 type="email"
                 label="Электронная почта"
                 placeholder="Введите свою электронную почту"
-                value={formData.email}
+                value={'example@mail.ru'}
                 onChange={handleInputChange}
                 required
               />

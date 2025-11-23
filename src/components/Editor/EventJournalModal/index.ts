@@ -1,0 +1,3 @@
+export { EventJournalModal } from './EventJournalModal';
+
+

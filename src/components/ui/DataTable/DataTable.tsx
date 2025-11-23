@@ -50,7 +50,6 @@ export const DataTable: React.FC<DataTableProps> = ({
   const someSelected = selectedRows.length > 0 && selectedRows.length < data.length;
 
   const handleRowClick = (rowId: string, event: React.MouseEvent) => {
-    // Не открываем подробнее если клик был на ActionsMenu или чекбоксе
     if ((event.target as HTMLElement).closest('[data-actions-menu]') || 
         (event.target as HTMLElement).closest('[data-checkbox="true"]')) {
       return;

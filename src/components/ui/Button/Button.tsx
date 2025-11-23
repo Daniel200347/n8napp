@@ -21,25 +21,22 @@ export const Button = ({
   active = false,
   ...props 
 }: ButtonProps) => {
-  // Функция для получения правильного цвета иконки в зависимости от варианта
   const getIconColor = () => {
     switch (variant) {
       case 'outline':
-        return '#0F172B'; // Темный цвет для outline кнопок
+        return '#0F172B';
       case 'default':
       case 'primary':
-        return '#F8FAFC'; // Белый цвет для default/primary кнопок
+        return '#F8FAFC';
       case 'google':
-        return '#0F172B'; // Темный цвет для google кнопок
+        return '#0F172B';
       default:
         return 'currentColor';
     }
   };
 
-  // Функция для клонирования иконки с правильным цветом
   const cloneIconWithColor = (icon: ReactNode) => {
     if (isValidElement(icon) && typeof icon.type === 'function') {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return cloneElement(icon, { color: getIconColor() } as any);
     }
     return icon;

@@ -1,0 +1,126 @@
+.addTriggerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.addTriggerButton {
+  background: #155DFC;
+  border: none;
+  border-radius: 8px;
+  padding: 0 20px;
+  height: 44px;
+  cursor: pointer !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 165px;
+}
+
+.addTriggerButton:hover {
+  background: #0f4bb8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(21, 93, 252, 0.3);
+}
+
+.addTriggerButton:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.buttonText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #F8FAFC;
+}
+
+.plusIcon {
+  width: 16px;
+  height: 16px;
+  color: #F8FAFC;
+}
+
+.connectionLine {
+  width: 2px;
+  height: 40px;
+  background: #E2E8F0;
+  margin-top: 8px;
+}
+
+.triggerNode {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+  margin-top: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.triggerNode:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.triggerNode:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.nodePlusIcon {
+  width: 16px;
+  height: 16px;
+  color: #020618;
+}
+
+.triggersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+}
+
+.triggerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.triggerConnection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.triggerPlusButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #62748E;
+}
+
+.triggerPlusButton:hover {
+  background: #E2E8F0;
+  color: #020618;
+}
+
+.triggerPlusButton:active {
+  transform: scale(0.95);
+}

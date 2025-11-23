@@ -1,0 +1,163 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.triggerCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #FEE685;
+  border-radius: 12px;
+  width: 400px;
+  transition: all 0.2s;
+}
+
+.triggerCard:hover {
+  cursor: pointer;
+  border-color: #155DFC;
+}
+
+.triggerCard:active {
+  border-color: #155DFC;
+  transform: translateY(1px);
+}
+
+.serviceIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.serviceIcon:hover {
+  background: rgba(42, 157, 144, 0.24);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.triggerName {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #020618;
+  margin: 0;
+}
+
+.serviceName {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4285714285714286em;
+  color: #62748E;
+  margin: 0;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.errorBadge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #FFFBEB;
+  border: 1px solid #FEE685;
+  border-radius: 9999px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  min-width: 8px;
+}
+
+.errorText {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4285714285714286em;
+  color: #E17100;
+  text-align: center;
+  width: 8px;
+}
+
+.menuButton {
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menuButton:hover {
+  background: #E2E8F0;
+}
+
+.menuButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.06), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  z-index: 1000;
+  width: 224px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 8px;
+  background: none;
+  border: none;
+  border-radius: 2px;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #020618;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: left;
+}
+
+.menuItem:hover {
+  background: #F8FAFC;
+}
+
+.dangerItem {
+  color: #E7000B;
+}
+

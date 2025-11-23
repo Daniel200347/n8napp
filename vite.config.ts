@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/n8napp/', // Базовый путь для GitHub Pages
+  base: process.env.NODE_ENV === 'production' ? '/n8napp/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -21,6 +21,6 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true,
+    open: '/',
   },
 })

@@ -1,0 +1,160 @@
+.nodeContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connectorContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin-top: 8px;
+}
+
+.connectionLine {
+  width: 2px;
+  height: 20px;
+  background: #E2E8F0;
+  margin: 0;
+}
+
+
+.plusButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 2px solid #E2E8F0;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plusButton:hover {
+  border-color: #155DFC;
+  background: #155DFC;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(21, 93, 252, 0.2);
+}
+
+.plusButton:active {
+  transform: scale(0.95);
+}
+
+.plusButton:disabled {
+  cursor: not-allowed !important;
+}
+
+.plusButton:disabled:hover {
+  border-color: #E2E8F0;
+  background: #FFFFFF;
+  color: inherit;
+  transform: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.triggerCard {
+  width: 400px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.triggerCard.default {
+  border: 1px solid #E2E8F0;
+}
+
+.triggerCard.error {
+  border: 2px solid #F59E0B;
+}
+
+.serviceIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconPlaceholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #020618;
+}
+
+.serviceName {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4285714285714286;
+  color: #62748E;
+}
+
+.menuButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.menuButton:hover {
+  background: #F8FAFC;
+}
+
+.errorIndicator {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 24px;
+  height: 24px;
+  background: #F59E0B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+}
+
+.exclamationMark {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+}
+
